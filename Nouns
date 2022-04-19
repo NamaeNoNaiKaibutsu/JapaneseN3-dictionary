@@ -1,0 +1,23 @@
+名詞 = {"愛情":"love, affection", "愛":"love", "従兄弟":"cousin", "男の人":"man", "生き物":"living thing, animal",
+      "お腹":"stomach, tummy", "胃":"stomach", "牛":"cattle, cow", "馬":"horse", "魚":"fish", "稲":"rice plant",
+      "嵐":"storm, tempest", "椅子":"chair", "いたずら":"tease, prank", "いらいら":"nervousness, irritation",
+      "うがい":"gargle, mouth rinsing", "おしゃべり":"chattering, talk", "お互い":"mutual, reciprocal",
+      "お昼":"lunch, noon", "一時":"moment, time", "一生":"whole life, lifetime", "一瞬":"a moment, an instant",
+      "一種":"a species, a kind", "一致":"conformity", "丘":"hill, height", "位置":"place, position, situation",
+      "依頼":"dependence, trust", "偉大":"greatness", "兎":"rabbit, hare", "内":"inside", "円":"circle, money",
+      "勢い":"force, vigour", "医師":"doctor, physician", "医療":"medical care, medical treatment", "印刷":"printing",
+      "印象":"impression", "命":"life", "哀れ":"pity, sorrow, grief", "営業":"business, trade", "嘘":"lie",
+      "噂":"rumor, report", "合図":"sign, signal", "大家":"rich family, distinguished family"}
+
+import random
+
+
+while True:
+    for key,value in 名詞.items():
+        random_key = random.choice(list(名詞))
+        random_value = 名詞.get(random_key)
+        answer = input(f"What does {random_key} mean? ")
+        if answer == random_value:
+            print("Correct!")
+        else:
+            print("False!")
